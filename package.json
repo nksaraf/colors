@@ -1,0 +1,31 @@
+{
+  "name": "@nksaraf/colors",
+  "version": "0.0.1",
+  "description": "",
+  "repository": "Nikhil Saraf",
+  "license": "MIT",
+  "author": "Nikhil Saraf <nsaraf98@gmail.com>",
+  "main": "dist/colors.cjs.js",
+  "unpkg": "dist/colors.js",
+  "module": "dist/colors.js",
+  "source": "src/colors.ts",
+  "browser": "dist/colors.umd.js",
+  "types": "dist/types",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "klap build",
+    "postbuild": "tsc -p tsconfig.json",
+    "prepublishOnly": "yarn build",
+    "start": "klap start",
+    "watch": "klap watch"
+  },
+  "devDependencies": {
+    "klap": "4.2.3",
+    "typescript": "3.8.3"
+  },
+  "klap": {
+    "example": "public/index.ts"
+  }
+}
