@@ -1,6 +1,6 @@
 {
   "name": "@nksaraf/colors",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "repository": "Nikhil Saraf",
   "license": "MIT",
@@ -15,7 +15,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "klap build",
+    "build": "klap build -n Colors",
     "postbuild": "tsc -p tsconfig.json",
     "prepublishOnly": "yarn build",
     "start": "klap start",
