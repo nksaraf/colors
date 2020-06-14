@@ -365,6 +365,8 @@ export const colors = {
   lightIcons: lightIcons,
 };
 
+export default colors;
+
 // module.exports = {
 //   colors
 // }
