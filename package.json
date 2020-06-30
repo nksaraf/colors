@@ -1,31 +1,37 @@
 {
   "name": "@nksaraf/colors",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "repository": "Nikhil Saraf",
   "license": "MIT",
   "author": "Nikhil Saraf <nsaraf98@gmail.com>",
-  "main": "dist/colors.cjs.js",
-  "unpkg": "dist/colors.js",
-  "module": "dist/colors.js",
-  "source": "src/colors.ts",
-  "browser": "dist/colors.umd.js",
-  "types": "dist/types",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "klap build -n Colors",
-    "postbuild": "tsc -p tsconfig.json",
-    "prepublishOnly": "yarn build",
-    "start": "klap start",
-    "watch": "klap watch"
-  },
+  "scripts": {},
   "devDependencies": {
-    "klap": "4.2.3",
     "typescript": "3.8.3"
   },
-  "klap": {
-    "example": "public/index.ts"
-  }
+  "pkger": {
+    "builder": "rollup",
+    "source": "src/colors.ts",
+    "name": "colors"
+  },
+  "module": "./dist/esm/colors.js",
+  "browser": "./dist/esm/colors.js",
+  "main": "./dist/cjs/production/colors.js",
+  "types": "dist/types",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/colors.js",
+      "browser": "./dist/esm/colors.js",
+      "require": "./dist/cjs/production/colors.js",
+      "node": "./dist/cjs/production/colors.js",
+      "default": "./dist/esm/colors.js"
+    },
+    "./package.json": "./package.json",
+    "./": "./"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "dist/types"
+  ]
 }
