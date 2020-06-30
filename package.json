@@ -1,6 +1,6 @@
 {
   "name": "@nksaraf/colors",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "repository": "Nikhil Saraf",
   "license": "MIT",
@@ -10,7 +10,6 @@
     "typescript": "3.8.3"
   },
   "pkger": {
-    "builder": "rollup",
     "source": "src/colors.ts",
     "name": "colors"
   },
